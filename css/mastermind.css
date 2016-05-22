@@ -1,0 +1,27 @@
+.red { background-color: #e74c3c; }
+.green { background-color: #2ecc71; }
+.blue { background-color: #3498db; }
+.yellow { background-color: #f1c40f; }
+.orange { background-color: #e67e22; }
+.purple { background-color: #9b59b6; }
+.cyan { background-color: #1abc9c; }
+.magenta { background-color: #de6bae; }
+.gray { background-color: #888; }
+.black { background-color: #000; }
+.white { background-color: #FFF; }
+.circle {
+    width: 50px;
+    height: 50px;
+    float:left;
+    border: gray 2px solid;
+    border-radius: 5%;
+    margin-left: 10px;
+}
+.circlelist {
+    width:100%;
+    margin-left:30%;
+    clear:both;
+    float:left;
+    margin-top: 16px;
+    margin-bottom: 19px;
+}

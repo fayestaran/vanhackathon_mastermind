@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>Mastermind Vanhackathon Challenge</title>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/mastermind.css">
+    <script type="text/javascript" language="javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" language="javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" language="javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" language="javascript" src="js/mastermind.js"></script>
+</head>
+
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="index.html" class="navbar-brand">Mastermind</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        <div class="jumbotron" style="float:left;width:100%;padding-top:0px;">
+            <div id="pnlInfo" style="text-align:center;float:left;width:100%;">
+                <h2 style="margin-top:30px;margin-bottom:30px;">>> Mastermind #Team_Club <<</h2>
+                Your Name:
+                <input type="text" id="txtName" style="width:200px;margin-left:10px;text-align:center;" />
+                <input type="hidden" id="txtKey" value="" />
+                <div id="btnNew" class="btn btn-primary btn-lg" style="margin-left:30px;">New Game</div>
+                <br />
+                <span id="txtInfo" style="display:none;float:left;width:100%;margin-top:25px;margin-bottom:25px;">
+                    Hi <label id="lblName"></label>, in this game you have to find the correct sequence of colors in the white squares.<br />
+                    <strong>Click</strong> on them to change their color, also <strong>drag and drop</strong> them to swap positions, <br />
+                    and then click at the button "Discover!" to check if they are according to the missing sequence.
+                </span>
+                <br />
+            </div>
+            <div id="pnWrap" style="text-align:center;float:left;width:100%;margin: 0 auto;">
+                <div id="pnlTab" style="text-align:right;float:left;width:75%;">
+                    <div id="pnlTab0" class="circlelist center">
+                        <div id="bllnew1" class="circle gray"></div>
+                        <div id="bllnew2" class="circle gray"></div>
+                        <div id="bllnew3" class="circle gray"></div>
+                        <div id="bllnew4" class="circle gray"></div>
+                        <div id="bllnew5" class="circle gray"></div>
+                        <div id="bllnew6" class="circle gray"></div>
+                        <div id="bllnew7" class="circle gray"></div>
+                        <div id="bllnew8" class="circle gray"></div>
+                    </div>
+                    <div id="pnlTabLast" class="circlelist center">
+                        <div id="blltry1" class="circle white" onclick="nextColor(this.id);"></div>
+                        <div id="blltry2" class="circle white" onclick="nextColor(this.id);"></div>
+                        <div id="blltry3" class="circle white" onclick="nextColor(this.id);"></div>
+                        <div id="blltry4" class="circle white" onclick="nextColor(this.id);"></div>
+                        <div id="blltry5" class="circle white" onclick="nextColor(this.id);"></div>
+                        <div id="blltry6" class="circle white" onclick="nextColor(this.id);"></div>
+                        <div id="blltry7" class="circle white" onclick="nextColor(this.id);"></div>
+                        <div id="blltry8" class="circle white" onclick="nextColor(this.id);"></div>
+                    </div>
+                </div>
+                <div id="pnlRes" style="text-align:left;float:left;width:25%;">
+                    <div id="pnlRes0" style="height:85px;">&nbsp;</div>
+                    <div id="pnlResLast" style="height:85px;margin-top:5px;">
+                        <div id="btnTry" style="margin:13px;float:left;" class="btn btn-primary btn-lg">Discover!</div>
+                        <div id="btnStop" style="margin:13px;float:left;" class="btn btn-primary btn-lg">Give Up</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
